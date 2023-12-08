@@ -1,5 +1,6 @@
 import { User, logPerson } from "./exercice1";
 
+// Exercice 1
 let user: User = {
   name: "M'hamed",
   age: 27,
