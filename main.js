@@ -25,11 +25,11 @@ var utilisateurAdmin = {
     password: "1234",
 };
 var utilisateurAnonyme = {
-    ip: "192.168.1.1",
+    ip: "192.168.1.2",
 };
 var utilisateurAvecNom = {
     nom: "Utilisateur Anonyme",
-    ip: "192.168.1.1",
+    ip: "192.168.1.3",
 };
 console.log("admin", utilisateurAdmin);
 console.log("user 1", utilisateurAnonyme);
