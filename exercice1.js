@@ -9,7 +9,7 @@ exports.users = [
         compentences: ["js", "node"],
     },
     {
-        name: "BÃ©atrice",
+        name: "Béatrice",
         age: 23,
         occupation: "Astronaute",
         adresse: {
