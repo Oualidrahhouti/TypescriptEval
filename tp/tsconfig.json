@@ -1,22 +1,17 @@
 {
     "compilerOptions": {
-      "target": "es6",
-      "lib": ["dom", "es2016","es6"],
-      "module": "es2015",
+      "module": "ESNext",
+      "target": "ESNext",
+      "lib": ["dom", "ESNext", "ES6"],
       "moduleResolution": "node",
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,
-      "jsx": "react",
       "outDir": "./dist"
     },
     "include": [
-      "*.ts",
-      "*.tsx"
+      "*.ts"
     ],
-    "exclude": [
-      "node_modules"
-    ]
-  }
+}
   
