@@ -2,26 +2,17 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
   const users = await fetchUsers();
-  console.log("users", users);
   const posts = await fetchPosts();
   populateTemplate(users, posts);
 
-
   const filterForm = document.getElementById("filterForm");
-  console.log("hello");
-  console.log("filterForm", filterForm);
   if (filterForm) {
-    console.log("hello2");
     filterForm.addEventListener("submit", async (event) => {
-      console.log("hello3");
       event.preventDefault();
-      const titre = document.getElementById("inline-titre").value.toLowerCase();
-      console.log("titre", titre);
+      const titre = document.getElementById("title").value.toLowerCase();
       const author = document.getElementById("author").value.toLowerCase();
-      console.log("author", author);
       try {
         const users = await fetchUsers();
-        console.log("users", users);
         const posts = await fetchPosts();
         // Filter users based on the entered values
         const filteredUsers = users.filter(
