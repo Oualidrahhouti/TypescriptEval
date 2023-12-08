@@ -29,12 +29,12 @@ const utilisateurAdmin: Administrateur = {
 };
 
 const utilisateurAnonyme: UtilisateurAnonyme = {
-  ip: "192.168.1.1",
+  ip: "192.168.1.2",
 };
 
 const utilisateurAvecNom: UtilisateurAnonyme = {
   nom: "Utilisateur Anonyme",
-  ip: "192.168.1.1",
+  ip: "192.168.1.3",
 };
 
 console.log("admin", utilisateurAdmin);

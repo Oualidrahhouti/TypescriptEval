@@ -7,7 +7,6 @@ export interface Administrateur {
   password: string;
 }
 
-export type UtilisateurAnonyme = {
-  nom?: string;
-  ip: string;
-} & Pick<Administrateur, "ip">;
+type IpNom = Pick<Administrateur, "ip"> & Partial<Pick<Administrateur, "nom">>;
+
+export interface UtilisateurAnonyme extends IpNom {}
