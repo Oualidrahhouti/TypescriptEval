@@ -6,13 +6,28 @@
         <style>
             body{
                 
-                background-color: blanchedalmond;
             }
         </style>
     </head>
     <body>
-        <div class="flex flex-col">
-            <div></div>
+        <div class="flex flex-col ml-2">
+            <!-- search filter -->
+            <div id="filter">
+                <h2 class="text-xl mb-2">filtres</h2>
+                <div class="flex">
+                    <div>
+                        <input type="text"  name="titre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="rechercher par titre" required>
+                    </div>
+                    <div>
+                        <input type="text" name="auteur" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ml-4" placeholder="rechercher par auteur" required>
+                    </div>      
+                    <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800 ml-7">rechercher</button>
+                </div>
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+            </div>
+
+            <!-- content -->
             <div></div>
         </div>
     </body>
