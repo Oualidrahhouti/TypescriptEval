@@ -1,29 +1,203 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>TP Exercice 3</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body>
-        <div class="flex flex-col ml-2">
-            <!-- search filter -->
-            <div id="filter">
-                <h2 class="text-xl mb-2">filtres</h2>
-                <div class="flex">
-                    <div>
-                        <input type="text"  name="titre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="rechercher par titre" required>
-                    </div>
-                    <div>
-                        <input type="text" name="auteur" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ml-4" placeholder="rechercher par auteur" required>
-                    </div>      
-                    <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800 ml-7">rechercher</button>
-                </div>
-                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+  <head>
+    <title>TP Exercice 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+    <style>
+      * {
+        font-family: "Rubik";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col w-screen">
+      <!-- search filter -->
+      <div id="filter">
+        <h2 class="text-6xl mb-2 py-4 px-8">Filtres</h2>
 
+        <form class="w-full flex flex-row items-start px-8">
+          <!-- titre -->
+          <div class="w-full md:flex md:items-center mb-6 mx-auto">
+            <div class="w-full mx-auto">
+              <input
+                class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="inline-titre"
+                type="text"
+                placeholder="Rechercher par titre"
+              />
             </div>
+          </div>
 
-            <!-- content -->
-            <div></div>
+          <!-- author -->
+          <div class="w-full md:flex md:items-center mb-6 mx-auto px-2">
+            <input
+              class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              type="text"
+              placeholder="Rechercher par auteur"
+            />
+          </div>
+
+          <!-- submit button -->
+          <div class="w-full md:flex md:items-center mx-auto">
+            <button
+              class="shadow bg-blue-500 hover:bg-blue-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+              type="button"
+            >
+              Rechercher
+            </button>
+          </div>
+        </form>
+
+        <hr class="h-[1px] mb-8 bg-gray-200 border-0 dark:bg-gray-300 mx-8" />
+      </div>
+
+      <!-- content -->
+      <div class="flex flex-wrap w-screen">
+        <!-- card -->
+        <div
+          class="max-w-md w-[33%] mb-4 mx-auto bg-white rounded-md overflow-hidden shadow-md"
+        >
+          <div class="p-4">
+            <!-- author -->
+            <h2 class="text-xl font-bold mb-2">Author name</h2>
+
+            <!-- email -->
+            <p class="text-gray-600 mb-4">email.</p>
+
+            <!-- article title -->
+            <h3 class="text-gray-600 mb-4">Article title.</h3>
+
+            <!-- items -->
+            <ul class="list-disc pl-4">
+              <li>Bullet point 1</li>
+              <li>Bullet point 2</li>
+              <li>Bullet point 3</li>
+            </ul>
+          </div>
         </div>
-    </body>
+
+        <!-- card -->
+        <div
+          class="max-w-md w-[33%] mb-4 mx-auto bg-white rounded-md overflow-hidden shadow-md"
+        >
+          <div class="p-4">
+            <!-- author -->
+            <h2 class="text-xl font-bold mb-2">Author name</h2>
+
+            <!-- email -->
+            <p class="text-gray-600 mb-4">email.</p>
+
+            <!-- article title -->
+            <h3 class="text-gray-600 mb-4">Article title.</h3>
+
+            <!-- items -->
+            <ul class="list-disc pl-4">
+              <li>Bullet point 1</li>
+              <li>Bullet point 2</li>
+              <li>Bullet point 3</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div
+          class="max-w-md w-[33%] mb-4 mx-auto bg-white rounded-md overflow-hidden shadow-md"
+        >
+          <div class="p-4">
+            <!-- author -->
+            <h2 class="text-xl font-bold mb-2">Author name</h2>
+
+            <!-- email -->
+            <p class="text-gray-600 mb-4">email.</p>
+
+            <!-- article title -->
+            <h3 class="text-gray-600 mb-4">Article title.</h3>
+
+            <!-- items -->
+            <ul class="list-disc pl-4">
+              <li>Bullet point 1</li>
+              <li>Bullet point 2</li>
+              <li>Bullet point 3</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div
+          class="max-w-md w-[33%] mb-4 mx-auto bg-white rounded-md overflow-hidden shadow-md"
+        >
+          <div class="p-4">
+            <!-- author -->
+            <h2 class="text-xl font-bold mb-2">Author name</h2>
+
+            <!-- email -->
+            <p class="text-gray-600 mb-4">email.</p>
+
+            <!-- article title -->
+            <h3 class="text-gray-600 mb-4">Article title.</h3>
+
+            <!-- items -->
+            <ul class="list-disc pl-4">
+              <li>Bullet point 1</li>
+              <li>Bullet point 2</li>
+              <li>Bullet point 3</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div
+          class="max-w-md w-[33%] mb-4 mx-auto bg-white rounded-md overflow-hidden shadow-md"
+        >
+          <div class="p-4">
+            <!-- author -->
+            <h2 class="text-xl font-bold mb-2">Author name</h2>
+
+            <!-- email -->
+            <p class="text-gray-600 mb-4">email.</p>
+
+            <!-- article title -->
+            <h3 class="text-gray-600 mb-4">Article title.</h3>
+
+            <!-- items -->
+            <ul class="list-disc pl-4">
+              <li>Bullet point 1</li>
+              <li>Bullet point 2</li>
+              <li>Bullet point 3</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div
+          class="max-w-md w-[33%] mb-4 mx-auto bg-white rounded-md overflow-hidden shadow-md"
+        >
+          <div class="p-4">
+            <!-- author -->
+            <h2 class="text-xl font-bold mb-2">Author name</h2>
+
+            <!-- email -->
+            <p class="text-gray-600 mb-4">email.</p>
+
+            <!-- article title -->
+            <h3 class="text-gray-600 mb-4">Article title.</h3>
+
+            <!-- items -->
+            <ul class="list-disc pl-4">
+              <li>Bullet point 1</li>
+              <li>Bullet point 2</li>
+              <li>Bullet point 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
