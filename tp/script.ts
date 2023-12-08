@@ -12,6 +12,42 @@ interface Post {
   body: string;
 }
 
+document.addEventListener("DOMContentLoaded", async () => {
+  const users = await fetchUsers();
+  const posts = await fetchPosts();
+  populateTemplate(users, posts);
+
+  const filterForm = document.getElementById("filterForm") as HTMLFormElement;
+  if (filterForm) {
+    filterForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const titre = (
+        document.getElementById("title") as HTMLInputElement
+      ).value.toLowerCase();
+      const author = (
+        document.getElementById("author") as HTMLInputElement
+      ).value.toLowerCase();
+
+      try {
+        const users = await fetchUsers();
+        const posts = await fetchPosts();
+
+        // Filter users based on the entered values
+        const filteredUsers = users.filter(
+          (user) =>
+            user.name.toLowerCase().includes(titre) &&
+            user.username.toLowerCase().includes(author)
+        );
+
+        populateTemplate(filteredUsers, posts);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    });
+  }
+});
+
 async function fetchUsers(): Promise<User[]> {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = (await response.json()) as User[];
@@ -55,39 +91,6 @@ async function populateTemplate(users: User[], posts: Post[]) {
     userContainer.innerHTML += userTemplate;
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const filterForm = document.getElementById("filterForm") as HTMLFormElement;
-
-  if (filterForm) {
-    filterForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      const titre = (
-        document.getElementById("inline-titre") as HTMLInputElement
-      ).value.toLowerCase();
-      const author = (
-        document.getElementById("author") as HTMLInputElement
-      ).value.toLowerCase();
-
-      try {
-        const users = await fetchUsers();
-        const posts = await fetchPosts();
-
-        // Filter users based on the entered values
-        const filteredUsers = users.filter(
-          (user) =>
-            user.name.toLowerCase().includes(titre) &&
-            user.username.toLowerCase().includes(author)
-        );
-
-        populateTemplate(filteredUsers, posts);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    });
-  }
-});
 
 // Initial population of the template
 populateTemplate([], []);
